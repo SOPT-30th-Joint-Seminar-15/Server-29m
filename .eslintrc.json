@@ -50,10 +50,11 @@
     
     // eslint-plugin-import의 helpful warnings
     // "import/default": 2,                            // default로 export된 아이들을 찾아서 가져옴
-    "import/no-named-as-default": 0 // default로 정의되지 않은 아이들을 불러왔음을 알려줌
+    "import/no-named-as-default": 0, // default로 정의되지 않은 아이들을 불러왔음을 알려줌
     // "import/no-named-as-default-member": 2,         // default export의 속성으로 exported name의 사용을 보고
     // // eslint-plugin-import의 style guide
     // "import/no-duplicates": 2                       // 같은 모듈에서 다른 이름으로 불러오는 것을 막기 위함 (from mod.js와 from mod)
+    "@typescript-eslint/no-var-requires": "warn"
   },
   "settings": {
     "import/resolver": {
