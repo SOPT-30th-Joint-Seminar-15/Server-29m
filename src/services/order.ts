@@ -1,8 +1,8 @@
-import order from "../models/order"
+import Order from "../models/order"
 
 const getOrderInfo = async (orderNum: string) => {
   try {
-    const orderInfo = await order.find({
+    const orderInfo = await Order.find({
       orderNum
     });
 
