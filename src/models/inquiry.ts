@@ -1,19 +1,19 @@
 import mongoose from "mongoose";
 
 import { InquiryInfo } from "../interfaces/inquiry/InquiryInfo";
-import order from "./order";
-import user from "./user";
+import Order from "./order";
+import User from "./user";
 
 const inquirySchema = new mongoose.Schema({
   userId: {
     type: mongoose.Types.ObjectId,
     unique: true,
-    ref: user,
+    ref: User,
   },
   orderNum: {
     type: mongoose.Types.ObjectId,
     unique: true,
-    ref: order,
+    ref: Order,
   },
   email: {
     type: String,
