@@ -1,5 +1,12 @@
+interface BaseReturnForm<T> {
+  status: number;
+  success: boolean;
+  message: string;
+  data?: T;
+}
+
 const util = {
-  success: (status: number, message: string, data?: any) => {
+  success: <T>(status: number, message: string, data?: T): BaseReturnForm<T> => {
     return {
       status,
       success: true,
@@ -7,11 +14,11 @@ const util = {
       data,
     };
   },
-  fail: (status: number, message: string, data?: any) => {
+  fail: <T>(status: number, message: string): BaseReturnForm<T> => {
     return {
       status,
       success: false,
-      message,
+      message
     };
   },
 };
