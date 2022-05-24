@@ -1,6 +1,6 @@
 import order from "../models/order"
 
-const getOrderedInfo = async (orderNum: string) => {
+const getOrderInfo = async (orderNum: string) => {
   try {
     const orderInfo = await order.find({
       orderNum
@@ -16,5 +16,5 @@ const getOrderedInfo = async (orderNum: string) => {
 };
 
 export default {
-  getOrderedInfo,
+  getOrderInfo,
 }
