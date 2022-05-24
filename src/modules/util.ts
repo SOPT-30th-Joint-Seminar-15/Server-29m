@@ -18,7 +18,7 @@ const util = {
     return {
       status,
       success: false,
-      message
+      message,
     };
   },
 };

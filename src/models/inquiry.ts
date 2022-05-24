@@ -4,7 +4,7 @@ import { InquiryInfo } from "../interfaces/inquiry/InquiryInfo";
 import order from "./order";
 import user from "./user";
 
-const InquirySchema = new mongoose.Schema({
+const inquirySchema = new mongoose.Schema({
   userId: {
     type: mongoose.Types.ObjectId,
     unique: true,
@@ -23,6 +23,6 @@ const InquirySchema = new mongoose.Schema({
   },
 });
 
-const Inquiry = mongoose.model<InquiryInfo & mongoose.Document>("Inquiry", InquirySchema);
+const Inquiry = mongoose.model<InquiryInfo & mongoose.Document>("Inquiry", inquirySchema);
 
 export default Inquiry;
