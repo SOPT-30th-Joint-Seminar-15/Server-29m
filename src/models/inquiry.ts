@@ -25,4 +25,4 @@ const InquirySchema = new mongoose.Schema({
 
 const Inquiry = mongoose.model<InquiryInfo & mongoose.Document>("Inquiry", InquirySchema);
 
-export default Inquiry
+export default Inquiry;
