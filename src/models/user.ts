@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 import { UserInfo } from "../interfaces/user/UserInfo";
 
-const UserSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
   userId: {
     type: String,
     required: true,
@@ -20,6 +20,6 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
-const User = mongoose.model<UserInfo & mongoose.Document>("User", UserSchema);
+const User = mongoose.model<UserInfo & mongoose.Document>("User", userSchema);
 
 export default User;

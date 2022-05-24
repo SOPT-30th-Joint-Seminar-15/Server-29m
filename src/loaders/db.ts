@@ -28,7 +28,7 @@ const connectDB = async () => {
     if (err instanceof Error) {
       // 확인용 콘솔은 배포에 포함하지 않음
       // 실제 배포에서는 에러 로깅하는 로직이 여기 들어갈 듯!
-      console.log('[ERROR] ', err.message);
+      console.log("[ERROR] ", err.message);
       process.exit(1);
     }
   }

@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import { OrderInfo } from "../interfaces/order/OrderInfo";
 import user from "./user";
 
-const OrderSchema = new mongoose.Schema({
+const orderSchema = new mongoose.Schema({
   userId: {
     type: mongoose.Types.ObjectId,
     required: true,
@@ -20,6 +20,6 @@ const OrderSchema = new mongoose.Schema({
   },
 });
 
-const Order = mongoose.model<OrderInfo & mongoose.Document>("Order", OrderSchema);
+const Order = mongoose.model<OrderInfo & mongoose.Document>("Order", orderSchema);
 
 export default Order;
