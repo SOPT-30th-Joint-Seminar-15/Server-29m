@@ -1,7 +1,7 @@
-import mongoose, { MongooseError } from "mongoose";
+import mongoose from "mongoose";
 
 import config from "../config";
-import inquiryInfo from "../models/inquiryInfo";
+import inquiry from "../models/inquiry";
 import order from "../models/order";
 import user from "../models/user";
 
@@ -21,7 +21,7 @@ const connectDB = async () => {
       console.log("📌 Order Collection is created!");
     });
 
-    inquiryInfo.createCollection().then(function () {
+    inquiry.createCollection().then(function () {
       console.log("📌 InquiryInfo Collection is created!");
     });
   } catch (err) {

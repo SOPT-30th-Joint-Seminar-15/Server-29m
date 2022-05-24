@@ -1,2 +1,5 @@
-// controller index file
-export {};
+import orderController from "./order";
+
+export {
+  orderController
+}

@@ -1,2 +1,5 @@
-//service index file
-export {};
+import OrderService from "./order";
+
+export {
+  OrderService,
+};
