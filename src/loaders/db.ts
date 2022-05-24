@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { MongooseError } from "mongoose";
 
 import config from "../config";
 import Inquiry from "../models/inquiry";
