@@ -23,4 +23,6 @@ const InquirySchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model<InquiryInfo & mongoose.Document>("Inquiry", InquirySchema);
+const Inquiry = mongoose.model<InquiryInfo & mongoose.Document>("Inquiry", InquirySchema);
+
+export default Inquiry;

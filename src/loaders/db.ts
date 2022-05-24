@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 import config from "../config";
-import inquiryInfo from "../models/inquiryInfo";
-import order from "../models/order";
-import user from "../models/user";
+import Inquiry from "../models/inquiry";
+import Order from "../models/order";
+import User from "../models/user";
 
 const connectDB = async () => {
   try {
@@ -13,15 +13,15 @@ const connectDB = async () => {
 
     console.log("🌸 몽구몽구스 연결 완료! 🌸");
 
-    user.createCollection().then(function () {
+    User.createCollection().then(function () {
       console.log("📌 User Collection is created!");
     });
 
-    order.createCollection().then(function () {
+    Order.createCollection().then(function () {
       console.log("📌 Order Collection is created!");
     });
 
-    inquiryInfo.createCollection().then(function () {
+    Inquiry.createCollection().then(function () {
       console.log("📌 InquiryInfo Collection is created!");
     });
   } catch (err) {
