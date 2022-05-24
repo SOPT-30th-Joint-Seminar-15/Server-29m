@@ -3,10 +3,9 @@ const message = {
   NOT_FOUND: "🤔 필요한 값을 찾을 수 없습니다.",
   BAD_REQUEST: "⚠️ 잘못된 요청입니다.",
   INTERNAL_SERVER_ERROR: "😇 서버 내부 오류네요,, 연락주세요",
-  
+
   SUCCESS_READ_ORDER_NUM: "😘 주문 번호 조회 성공!",
   SUCCESS_DELETE_INQUIRY: "😘 문의 삭제 성공!",
-
 };
 
 export default message;

@@ -1,5 +1,3 @@
 import orderController from "./order";
 
-export {
-  orderController
-}
+export { orderController };

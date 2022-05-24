@@ -1,18 +1,19 @@
-import { Request, Response } from "express"
+import { Request, Response } from "express";
+
 import message from "../modules/responseMessage";
 import statusCode from "../modules/statusCode";
 import util from "../modules/util";
 import OrderService from "../services/order";
 
 /**
- * @route GET /order/:orderNum 
+ * @route GET /order/:orderNum
  * @desc 주문 번호로 주문 상품 정보를 조회합니다.
  * @access Public
  */
-const getOrderInfo = async(req: Request, res: Response) => {
+const getOrderInfo = async (req: Request, res: Response) => {
   const { orderNum } = req.params;
 
-  if (!orderNum){
+  if (!orderNum) {
     return res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, message.BAD_REQUEST));
   }
 
@@ -29,4 +30,4 @@ const getOrderInfo = async(req: Request, res: Response) => {
 
 export default {
   getOrderInfo,
-}
+};

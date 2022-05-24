@@ -1,5 +1,3 @@
 import OrderService from "./order";
 
-export {
-  OrderService,
-};
+export { OrderService };

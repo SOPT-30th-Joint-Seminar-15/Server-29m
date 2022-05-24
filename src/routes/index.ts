@@ -1,6 +1,7 @@
 //router index file
 import { Router } from "express";
-import OrderRouter from './order';
+
+import OrderRouter from "./order";
 
 const router = Router();
 
