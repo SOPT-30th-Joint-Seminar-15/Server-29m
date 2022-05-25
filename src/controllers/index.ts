@@ -1,2 +1,3 @@
 // controller index file
-export {};
+import InquiryController from "./InquiryController";
+export { InquiryController };
