@@ -18,9 +18,20 @@ const deleteInquiry = async (req: Request, res: Response) => {
   }
 
   try {
-    await InquiryService.deleteInquiry(inquiryId);
-
-    res.status(statusCode.OK).send(util.success(statusCode.OK, message.SUCCESS_DELETE_INQUIRY));
+    const result = await InquiryService.deleteInquiry(inquiryId);
+    switch (result) {
+      case -1:
+        res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, "🧐 inquiryId값이 없습니다."));
+        break;
+      case -2:
+        res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, "🤔 inquiryId의 형식을 다시 확인해주세요."))
+        break;
+      case -3:
+        res.status(statusCode.NOT_FOUND).send(util.fail(statusCode.NOT_FOUND, message.NOT_FOUND));
+        break;
+      default:
+        res.status(statusCode.OK).send(util.success(statusCode.OK, message.SUCCESS_DELETE_INQUIRY));
+    }
   } catch (err) {
     res
       .status(statusCode.INTERNAL_SERVER_ERROR)
