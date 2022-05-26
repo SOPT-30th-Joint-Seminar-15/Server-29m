@@ -3,7 +3,7 @@ import Order from "../models/order";
 const getOrderInfo = async (orderNum: string) => {
   try {
     const orderInfo = await Order.find({
-      orderNum,
+      _id: orderNum,
     });
 
     return orderInfo;

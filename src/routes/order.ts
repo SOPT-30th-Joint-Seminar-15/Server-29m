@@ -4,6 +4,6 @@ import orderController from "../controllers/order";
 
 const router: Router = Router();
 
-router.get("/:order", orderController.getOrderInfo);
+router.get("/:orderNum", orderController.getOrderInfo);
 
 export default router;
