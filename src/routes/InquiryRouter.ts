@@ -9,10 +9,14 @@ router.post(
   "/user/inquiry",
   [
     body("userId").notEmpty(),
+    body("email").notEmpty(),
     body("inquiryCategory").notEmpty(),
     body("orderNum").notEmpty(),
     body("title").notEmpty(),
     body("content").notEmpty(),
+    body("isSubscribed").notEmpty(),
   ],
   InquiryController.createInquiry,
 );
+
+export default router;
