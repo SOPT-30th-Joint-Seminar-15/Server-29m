@@ -13,7 +13,6 @@ const inquirySchema = new mongoose.Schema(
     },
     orderNum: {
       type: mongoose.Types.ObjectId,
-      required: true,
       ref: Order,
     },
     email: {
@@ -28,7 +27,7 @@ const inquirySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    isSubcribed: {
+    isSubscribed: {
       type: Boolean,
       required: true,
     },

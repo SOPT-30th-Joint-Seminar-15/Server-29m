@@ -5,6 +5,7 @@ const message = {
   INTERNAL_SERVER_ERROR: "서버 내부 오류",
 
   CREATE_INQUIRY_SUCCESS: "문의 생성 완료",
+  READ_INQUIRY_SUCCESS: "유저 조회 성공",
 };
 
 export default message;
