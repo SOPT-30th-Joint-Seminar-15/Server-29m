@@ -7,12 +7,8 @@ const router = Router();
 
 router.post(
   "/user/inquiry",
-  [
-    body("userId").notEmpty(),
-    body("inquiryCategory").notEmpty(),
-    body("orderNum").notEmpty(),
-    body("title").notEmpty(),
-    body("content").notEmpty(),
-  ],
+  [body("userId").notEmpty(), body("orderNum").notEmpty(), body("title").notEmpty(), body("content").notEmpty()],
   InquiryController.createInquiry,
 );
+
+export default router;
