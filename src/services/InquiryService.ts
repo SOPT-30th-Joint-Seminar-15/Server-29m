@@ -14,7 +14,6 @@ const createInquiry = async (inquiryCreateDto: InquiryCreateDto): Promise<PostBa
       userId: inquiryCreateDto.userId,
       orderNum: inquiryCreateDto.orderNum,
       email: inquiryCreateDto.email,
-      createdAt: inquiryCreateDto.createdAt,
       title: inquiryCreateDto.title,
       content: inquiryCreateDto.content,
       isSubscribed: inquiryCreateDto.isSubscribed,

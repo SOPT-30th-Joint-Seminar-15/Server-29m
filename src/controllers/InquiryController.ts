@@ -14,13 +14,12 @@ const { validationResult } = require("express-validator");
  */
 
 const createInquiry = async (req: Request, res: Response) => {
+  const inquiryCreateDto: InquiryCreateDto = req.body;
   const error = validationResult(req);
 
   if (!error.isEmpty()) {
     return res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, message.BAD_REQUEST));
   }
-
-  const inquiryCreateDto: InquiryCreateDto = req.body();
 
   try {
     const data = await InquiryService.createInquiry(inquiryCreateDto);
