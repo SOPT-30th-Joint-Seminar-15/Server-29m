@@ -1,9 +1,10 @@
 import { PostBaseResponseDto } from "../interfaces/common/PostBaseResponseDto";
 import { InquiryCreateDto } from "../interfaces/inquiry/InquiryCreateDto";
+import { InquiryCreateResponseDto } from "../interfaces/inquiry/InquiryCreateResponseDto";
 import Inquiry from "../models/inquiry";
 import User from "../models/user";
 
-const createInquiry = async (inquiryCreateDto: InquiryCreateDto): Promise<PostBaseResponseDto | null> => {
+const createInquiry = async (inquiryCreateDto: InquiryCreateDto): Promise<InquiryCreateResponseDto | null> => {
   try {
     const user = await User.findById(inquiryCreateDto.userId);
 
@@ -21,8 +22,13 @@ const createInquiry = async (inquiryCreateDto: InquiryCreateDto): Promise<PostBa
     });
 
     await newInquiry.save();
-    const data = {
+
+    const data = await {
       _id: newInquiry._id,
+      inquiry: newInquiry.inquiryCategory,
+      orderNum: newInquiry.orderNum,
+      title: newInquiry.title,
+      content: newInquiry.content,
     };
 
     return data;

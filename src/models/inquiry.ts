@@ -8,17 +8,33 @@ const inquirySchema = new mongoose.Schema(
   {
     userId: {
       type: mongoose.Types.ObjectId,
+      required: true,
       ref: User,
     },
     orderNum: {
       type: mongoose.Types.ObjectId,
+      required: true,
       ref: Order,
     },
     email: {
       type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    content: {
+      type: String,
+      required: true,
+    },
+    isSubscribed: {
+      type: Boolean,
+      required: true,
     },
     inquiryCategory: {
       type: String,
+      required: true,
     },
   },
   {
