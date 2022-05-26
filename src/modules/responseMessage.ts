@@ -8,7 +8,7 @@ const message = {
   SUCCESS_DELETE_INQUIRY: "😘 문의 삭제 성공!",
 
   CREATE_INQUIRY_FAIL: "문의 생성 실패",
-  CREATE_INQUIRY_SUCCESS: "문의 생성 생성",
+  CREATE_INQUIRY_SUCCESS: "문의 생성 완료",
 };
 
 export default message;
