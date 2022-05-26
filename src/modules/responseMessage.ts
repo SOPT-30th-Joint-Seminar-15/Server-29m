@@ -9,6 +9,7 @@ const message = {
 
   CREATE_INQUIRY_FAIL: "문의 생성 실패",
   CREATE_INQUIRY_SUCCESS: "문의 생성 완료",
+  READ_INQUIRY_SUCCESS: "유저 조회 성공",
 
   READ_USER_INQUIRY_SUCCESS: "유저 문의 조회",
   

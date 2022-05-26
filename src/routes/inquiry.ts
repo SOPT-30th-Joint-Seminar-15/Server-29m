@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { body } from "express-validator/check";
 
-import { inquiryController } from "../controllers";
+import { inquiryController, UserController } from "../controllers";
 
 const router: Router = Router();
 
@@ -10,8 +10,8 @@ router.post(
   [
     body("userId").notEmpty(),
     body("email").notEmpty(),
+    body("email").isEmail(),
     body("inquiryCategory").notEmpty(),
-    body("orderNum").notEmpty(),
     body("title").notEmpty(),
     body("content").notEmpty(),
     body("isSubscribed").notEmpty(),

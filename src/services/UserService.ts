@@ -4,16 +4,17 @@ import Inquiry from "../models/inquiry";
 
 const getUserInquiry = async (userId: string): Promise<UserResponseDto[]> => {
   try {
-    const inquirys = await Inquiry.find({ "userId": userId });
+    const inquirys = await Inquiry.find({ userId });
 
+    console.log(inquirys);
     const userResponseDtos: UserResponseDto[] = await Promise.all(
       inquirys.map((inquiry: InquiryInfo) => {
         const result = {
-          inquiryId: inquiry._id,
+          inquiryId: inquiry.userId,
           question: inquiry.content,
           createdAt: inquiry.createdAt,
           answer: inquiry.answer,
-          isAnswered: inquiry.answer ? true: false,
+          isAnswered: inquiry.answer ? true : false,
         };
 
         return result;

@@ -8,5 +8,6 @@ export interface InquiryInfo {
   content: string;
   isSubscribed: boolean;
   inquiryCategory: string;
+  createdAt: Date;
   answer: string;
 }
