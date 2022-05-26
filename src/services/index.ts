@@ -1,4 +1,4 @@
-import OrderService from "./order";
 import InquiryService from "./inquiry";
+import OrderService from "./order";
 
-export { OrderService, InquiryService };
+export { InquiryService, OrderService };

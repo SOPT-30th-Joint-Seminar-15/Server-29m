@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+
 import message from "../modules/responseMessage";
 import statusCode from "../modules/statusCode";
 import util from "../modules/util";
@@ -27,4 +28,4 @@ const deleteInquiry = async (req: Request, res: Response) => {
   }
 };
 
-export default {deleteInquiry,}
+export default { deleteInquiry };

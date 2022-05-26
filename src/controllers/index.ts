@@ -1,4 +1,4 @@
-import orderController from "./order";
 import inquiryController from "./inquiry";
+import orderController from "./order";
 
-export { orderController, inquiryController, };
+export { inquiryController, orderController };

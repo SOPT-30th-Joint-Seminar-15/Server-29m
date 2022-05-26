@@ -1,4 +1,5 @@
 import { Router } from "express";
+
 import { inquiryController } from "../controllers";
 
 const router: Router = Router();
