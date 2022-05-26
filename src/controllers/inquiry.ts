@@ -20,7 +20,7 @@ const deleteInquiry = async (req: Request, res: Response) => {
   try {
     await InquiryService.deleteInquiry(inquiryId);
 
-    res.status(statusCode.NO_CONTENT).send(util.success(statusCode.NO_CONTENT, message.SUCCESS_DELETE_INQUIRY));
+    res.status(statusCode.OK).send(util.success(statusCode.OK, message.SUCCESS_DELETE_INQUIRY));
   } catch (err) {
     res
       .status(statusCode.INTERNAL_SERVER_ERROR)
