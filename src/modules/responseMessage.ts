@@ -5,8 +5,8 @@ const message = {
   INTERNAL_SERVER_ERROR: "서버 내부 오류",
 
 
-  CREATE_INQUIRY_FAIL: "Inquiry 생성 실패",
-  CREATE_INQUIRY_SUCCESS: "Inquiry 생성 생성",
+  CREATE_INQUIRY_FAIL: "문의 생성 실패",
+  CREATE_INQUIRY_SUCCESS: "문의 생성 생성",
 };
 
 export default message;
