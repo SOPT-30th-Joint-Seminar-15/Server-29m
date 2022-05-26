@@ -1,5 +1,38 @@
 import { isValidObjectId } from "mongoose";
+
+import { PostBaseResponseDto } from "../interfaces/common/PostBaseResponseDto";
+import { InquiryCreateDto } from "../interfaces/inquiry/InquiryCreateDto";
 import Inquiry from "../models/inquiry";
+import User from "../models/user";
+
+const createInquiry = async (inquiryCreateDto: InquiryCreateDto): Promise<PostBaseResponseDto | null> => {
+  try {
+    const user = await User.findById(inquiryCreateDto.userId);
+
+    if (!user) {
+      return null;
+    }
+    const newInquiry = new Inquiry({
+      userId: inquiryCreateDto.userId,
+      orderNum: inquiryCreateDto.orderNum,
+      email: inquiryCreateDto.email,
+      title: inquiryCreateDto.title,
+      inquiryCategory: inquiryCreateDto.inquiryCategory,
+      content: inquiryCreateDto.content,
+      isSubscribed: inquiryCreateDto.isSubscribed,
+    });
+
+    await newInquiry.save();
+    const data = {
+      _id: newInquiry._id,
+    };
+
+    return data;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};
 
 const deleteInquiry = async (inquiryId: string) => {
   if (!inquiryId) {
@@ -13,6 +46,7 @@ const deleteInquiry = async (inquiryId: string) => {
   }
 
   const inquiry = await Inquiry.findById(inquiryId);
+
   if (!inquiry) {
     // db 상에 존재하지 않는 inquiry일 때
     return -3;
@@ -25,4 +59,5 @@ const deleteInquiry = async (inquiryId: string) => {
 
 export default {
   deleteInquiry,
+  createInquiry,
 };
