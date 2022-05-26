@@ -31,10 +31,14 @@ const inquirySchema = new mongoose.Schema(
     isSubscribed: {
       type: Boolean,
       required: true,
+      default: false,
     },
     inquiryCategory: {
       type: String,
       required: true,
+    },
+    answer: {
+      type: String,
     },
   },
   {
