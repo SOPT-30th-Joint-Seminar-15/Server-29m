@@ -6,6 +6,9 @@ const message = {
 
   SUCCESS_READ_ORDER_NUM: "😘 주문 번호 조회 성공!",
   SUCCESS_DELETE_INQUIRY: "😘 문의 삭제 성공!",
+  
+  CREATE_INQUIRY_FAIL: "Inquiry 생성 실패",
+  CREATE_INQUIRY_SUCCESS: "Inquiry 생성 생성",
 };
 
 export default message;
