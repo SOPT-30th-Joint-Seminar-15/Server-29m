@@ -8,16 +8,12 @@ const getUserInquiry = async (userId: string): Promise<UserResponseDto[]> => {
 
     const userResponseDtos: UserResponseDto[] = await Promise.all(
       inquirys.map((inquiry: InquiryInfo) => {
-        let isAnswered = false;
-        if (inquiry.answer) {
-            isAnswered = true;
-        }
         const result = {
           inquiryId: inquiry._id,
           question: inquiry.content,
           createdAt: inquiry.createdAt,
           answer: inquiry.answer,
-          isAnswered: isAnswered,
+          isAnswered: inquiry.answer ? true: false,
         };
 
         return result;
