@@ -20,6 +20,4 @@ router.post(
 );
 router.delete("/:inquiryId", inquiryController.deleteInquiry);
 
-router.get("/user/:userId/inquiry", UserController.getUserInquiry);
-
 export default router;
