@@ -17,7 +17,7 @@
   "plugins": ["simple-import-sort", "prettier", "import", "@typescript-eslint/eslint-plugin"],
   "rules": {
     // 0: off 1: warn 2: error 로 표기 가능
-    "indent": ["error", 2], // 들여쓰기 몇 칸?
+    "indent": ["error", 2, { "SwitchCase": 1 }], // 들여쓰기 몇 칸?
     "quotes": ["error", "double"], // 쌍따옴표가 아닌 홑따옴표를 사용
     "semi": ["error", "always"], // semi colon을 강제함
     "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
@@ -47,7 +47,7 @@
     // "import/export": 2,                             // 이름이나 기본값의 반복적인 내보내기와 같은 내보내기와 관련된 것을 체크
     // "import/no-absolute-path": 2,                   // 절대경로로 파일 불러오기 금지
     // "import/no-relative-packages": 2,               // 상대경로로 패키지 불러오기 금지
-    
+
     // eslint-plugin-import의 helpful warnings
     // "import/default": 2,                            // default로 export된 아이들을 찾아서 가져옴
     "import/no-named-as-default": 0, // default로 정의되지 않은 아이들을 불러왔음을 알려줌
