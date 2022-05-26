@@ -1,4 +1,5 @@
-import InquiryService from "./InquiryService";
-
 //service index file
-export { InquiryService };
+import InquiryService from "./inquiry";
+import OrderService from "./order";
+import UserService from "./UserService";
+export { InquiryService, OrderService, UserService };

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { body } from "express-validator/check";
 
-import InquiryController from "../controllers/InquiryController";
+import { inquiryController, UserController } from "../controllers";
 
 const router: Router = Router();
 
@@ -16,9 +16,10 @@ router.post(
     body("content").notEmpty(),
     body("isSubscribed").notEmpty(),
   ],
-  InquiryController.createInquiry,
+  inquiryController.createInquiry,
 );
+router.delete("/:inquiryId", inquiryController.deleteInquiry);
 
-router.get("/user/:userId/inquiry", InquiryController.getInquiry);
+router.get("/user/:userId/inquiry", UserController.getUserInquiry);
 
 export default router;
