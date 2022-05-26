@@ -7,4 +7,5 @@ export interface InquiryCreateDto {
   title: string;
   content: string;
   isSubscribed: boolean;
+  inquiryCategory: string;
 }

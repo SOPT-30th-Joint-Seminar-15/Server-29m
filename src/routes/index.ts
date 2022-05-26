@@ -5,6 +5,6 @@ import InquiryRouter from "./InquiryRouter";
 
 const router = Router();
 
-router.use("/", InquiryRouter);
+router.use("/inquiry", InquiryRouter);
 
 export default router;

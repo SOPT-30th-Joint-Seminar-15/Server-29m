@@ -8,15 +8,16 @@ const inquirySchema = new mongoose.Schema(
   {
     userId: {
       type: mongoose.Types.ObjectId,
-      unique: true,
       ref: User,
     },
     orderNum: {
       type: mongoose.Types.ObjectId,
-      unique: true,
       ref: Order,
     },
     email: {
+      type: String,
+    },
+    inquiryCategory: {
       type: String,
     },
   },

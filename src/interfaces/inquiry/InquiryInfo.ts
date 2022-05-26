@@ -7,4 +7,5 @@ export interface InquiryInfo {
   title: string;
   content: string;
   isSubscribed: boolean;
+  inquiryCategory: string;
 }

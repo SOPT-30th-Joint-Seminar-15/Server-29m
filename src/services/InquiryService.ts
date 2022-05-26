@@ -17,6 +17,7 @@ const createInquiry = async (inquiryCreateDto: InquiryCreateDto): Promise<PostBa
       title: inquiryCreateDto.title,
       content: inquiryCreateDto.content,
       isSubscribed: inquiryCreateDto.isSubscribed,
+      inquiryCategory: inquiryCreateDto.inquiryCategory,
     });
 
     await newInquiry.save();
