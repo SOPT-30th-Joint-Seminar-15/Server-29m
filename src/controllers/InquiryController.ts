@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import { Request, Response } from "express";
 import { validationResult } from "express-validator";
 
 import { PostBaseResponseDto } from "../interfaces/common/PostBaseResponseDto";
@@ -20,7 +20,6 @@ const createInquiry = async (req: Request, res: Response) => {
   if (!error.isEmpty()) {
     return res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, message.NULL_VALUE));
   }
-
   const inquiryCreateDto: InquiryCreateDto = req.body;
 
   try {
