@@ -28,7 +28,7 @@ const inquirySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    isSubcribed: {
+    isSubscribed: {
       type: Boolean,
       required: true,
     },

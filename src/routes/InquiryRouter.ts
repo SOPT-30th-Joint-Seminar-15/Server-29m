@@ -14,7 +14,7 @@ router.post(
     body("orderNum").notEmpty(),
     body("title").notEmpty(),
     body("content").notEmpty(),
-    body("isSubcribed").notEmpty(),
+    body("isSubscribed").notEmpty(),
   ],
   InquiryController.createInquiry,
 );
