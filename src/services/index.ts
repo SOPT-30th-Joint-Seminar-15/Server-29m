@@ -1,2 +1,4 @@
+import InquiryService from "./InquiryService";
+
 //service index file
-export {};
+export { InquiryService };
