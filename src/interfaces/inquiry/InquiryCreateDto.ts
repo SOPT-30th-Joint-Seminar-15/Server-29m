@@ -8,5 +8,5 @@ export interface InquiryCreateDto {
   content: string;
   isSubscribed: boolean;
   inquiryCategory: string;
-  answer?: string;
+  answer: string;
 }
