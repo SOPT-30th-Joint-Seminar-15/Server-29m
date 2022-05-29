@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { body } from "express-validator/check";
 
-import { inquiryController, UserController } from "../controllers";
+import { inquiryController} from "../controllers";
 
 const router: Router = Router();
 
