@@ -10,6 +10,7 @@ const getUserInquiry = async (userId: string): Promise<UserResponseDto[]> => {
       inquirys.map((inquiry: InquiryInfoWithId) => {
         const result = {
           inquiryId: inquiry._id,
+          inquiryCategory: inquiry.inquiryCategory,
           question: inquiry.content,
           createdAt: inquiry.createdAt,
           answer: inquiry.answer,
