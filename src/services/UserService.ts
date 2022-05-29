@@ -6,11 +6,10 @@ const getUserInquiry = async (userId: string): Promise<UserResponseDto[]> => {
   try {
     const inquirys = await Inquiry.find({ userId });
 
-    console.log(inquirys);
     const userResponseDtos: UserResponseDto[] = await Promise.all(
       inquirys.map((inquiry: InquiryInfo) => {
         const result = {
-          inquiryId: inquiry.userId,
+          inquiryId: inquiry._id,
           question: inquiry.content,
           createdAt: inquiry.createdAt,
           answer: inquiry.answer,
