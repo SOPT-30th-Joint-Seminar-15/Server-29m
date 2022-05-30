@@ -1,6 +1,7 @@
 import { InquiryInfoWithId } from "../interfaces/inquiry/InquiryInfoWithId";
 import { UserResponseDto } from "../interfaces/user/UserResponseDto";
 import Inquiry from "../models/inquiry";
+import { convertDateForm } from "../modules/convertDateForm";
 
 const getUserInquiry = async (userId: string): Promise<UserResponseDto[]> => {
   try {
@@ -12,9 +13,9 @@ const getUserInquiry = async (userId: string): Promise<UserResponseDto[]> => {
           inquiryId: inquiry._id,
           inquiryCategory: inquiry.inquiryCategory,
           question: inquiry.content,
-          createdAt: inquiry.createdAt,
           answer: inquiry.answer,
           isAnswered: inquiry.answer ? true : false,
+          createdAt: convertDateForm(inquiry.createdAt),
         };
 
         return result;
