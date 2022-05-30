@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { validationResult } from "express-validator";
+import { validationResult } from "express-validator/check";
 
 import { PostBaseResponseDto } from "../interfaces/common/PostBaseResponseDto";
 import { InquiryCreateDto } from "../interfaces/inquiry/InquiryCreateDto";
